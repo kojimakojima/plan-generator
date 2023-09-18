@@ -7,7 +7,7 @@ function Output({ type, setList }) {
   const [isSave, setIsSave] = useState(false);
 
   const fetchData = async () => {
-    const url = `http://www.boredapi.com/api/activity?type=${type}`;
+    const url = `https://www.boredapi.com/api/activity?type=${type}`;
 
     try {
       setLoading(true);
