@@ -8,10 +8,12 @@ h1 {
   font-size: 35px;
 }
 
+html,
 body {
   background-color: #181a1b;
   color: #dedada;
   font-family: "Mooli", sans-serif;
+  height: 100%;
 }
 
 select {
