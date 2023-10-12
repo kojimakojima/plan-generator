@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
+import { usePlan } from "../contexts/PlanContext";
 
-function TextFileGenerator({ list }) {
+function TextFileGenerator() {
+  const { list } = usePlan();
   const [fileBlob, setFileBlob] = useState(null);
 
   const downloadTextFile = () => {

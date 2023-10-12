@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { usePlan } from "../contexts/PlanContext";
 
-function Output({ type, setList }) {
+function Output() {
+  const { type, setList } = usePlan();
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(false);
   const [isSaveButton, setIsSaveButton] = useState(false);

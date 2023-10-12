@@ -2,25 +2,23 @@ import Menu from "./Menu";
 import TopBar from "./TopBar";
 import Output from "./Output";
 import PlanList from "./PlanList";
-import { useState } from "react";
+
 import TextFileGenerator from "./TextFileGenerator";
+import { usePlan } from "../contexts/PlanContext";
 
 function App() {
-  const [type, setType] = useState("");
-  const [list, setList] = useState([]);
+  const { list } = usePlan();
 
   return (
     <div className="app">
       <TopBar />
-      <Output type={type} setList={setList} />
-      <Menu type={type} setType={setType} />
+      <Output />
+      <Menu />
 
-      {list.length == 0 ? (
-        <></>
-      ) : (
+      {list.length > 0 && (
         <>
-          <PlanList list={list} setList={setList} />
-          <TextFileGenerator list={list} />
+          <PlanList />
+          <TextFileGenerator />
         </>
       )}
     </div>

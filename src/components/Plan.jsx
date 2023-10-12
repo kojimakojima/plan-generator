@@ -1,4 +1,8 @@
-function Plan({ children, setList, id }) {
+import { usePlan } from "../contexts/PlanContext";
+
+function Plan({ children, id }) {
+  const { setList } = usePlan();
+
   const handleDeletePlan = (id) => {
     setList((list) => list.filter((e) => e.id !== id));
   };

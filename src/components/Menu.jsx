@@ -1,4 +1,8 @@
-function Menu({ type, setType }) {
+import { useContext } from "react";
+import { usePlan } from "../contexts/PlanContext";
+
+function Menu() {
+  const { type, setType } = usePlan();
   return (
     <div className="menu">
       <div>
